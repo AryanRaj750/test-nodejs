@@ -13,9 +13,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./src -s",
-    "build": "npm run clean && npm run build-babel",
     "start": "babel-node src/index.js"
   },
   "babel": {
