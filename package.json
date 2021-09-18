@@ -6,16 +6,23 @@
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "esm": "^3.2.25",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.6.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+
   },
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js"
+    "start": "babel-node index.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "keywords": [],
   "author": "",
