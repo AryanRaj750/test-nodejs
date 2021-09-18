@@ -1,9 +1,13 @@
 import express from 'express';
 import userRoute from './userRoute';
-// const express = require('express');
+import dotenv from 'dotenv';
 
+// const express = require('express');
+dotenv.config({
+  path: '../config.env',
+});
 const app = express();
 app.use(express.json())
 app.use('/app', userRoute);
 
-app.listen(3000, () => console.log("Listening to port 3000"));
+app.listen(process.env.PORT, () => console.log("Listening to port 3000"));

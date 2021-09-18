@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "esm": "^3.2.25",
-    "express": "^4.17.1",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.6.0"
+    "babel-core": "^6.6.0",
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^10.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src -s",
